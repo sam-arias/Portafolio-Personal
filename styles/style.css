@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-primario: #121212; /*Fondo*/
+    --color-secundario: #F6F6F6; /*Texto*/
+    --color-terciario: #50E3C2; /*Botones*/
+    --color-hover: #272727;
+
+    --fuente--montserrat: "Montserrat", sans-serif;
+    --fuente--Krona: "Krona One", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+    /*height: 100vh;*/
+}
+
+.header {
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--fuente--montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.span {
+    color: var(--color-terciario);
+    border: 1px solid var(--color-terciario);
+    padding: 5px;
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    padding: 5% 15%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion__contenido__titulo {
+    font-size: 2rem;
+    font-family: var(--fuente--Krona);
+}
+
+.titulo-destaque {
+    color: var(--color-terciario);
+}
+
+.presentacion__contenido__texto {
+    font-size: 1.5rem;
+    font-family: var(--fuente--montserrat);
+}
+
+.presentacion__enlaces {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlaces__subtitulo {
+    font-family: var(--fuente--Krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion__enlaces__link {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--color-terciario);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-family: var(--fuente--montserrat);
+}
+
+.presentacion__enlaces__link:hover {
+    background-color: var(--color-hover);
+}
+
+.img-blanco-negro {
+    filter: grayscale(100%);
+}
+
+.presentacion__imagen {
+    width: 50%;
+    border: 2px solid var(--color-terciario);
+    border-radius: 8px;
+    padding: 8px; /* Añadir espacio entre el borde y las imágenes */
+    box-sizing: border-box; /* Incluir padding y border en el tamaño total del contenedor */
+}
+
+
+/*CODIDO DE LA PÁGINA ABOUT*/
+.lista {
+    padding: 4% 0% 0% 5%;
+}
+
+.presentacion__imagenes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.presentacion__imagenes__subtitulo {
+    font-family: var(--fuente--Krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.section__imagenes {
+    display: flex;
+    width: 500px;
+    height: 400px;
+    border: 2px solid var(--color-terciario);
+    border-radius: 10px;
+    padding: 5px; /* Añadir espacio entre el borde y las imágenes */
+    box-sizing: border-box; /* Incluir padding y border en el tamaño total del contenedor */
+}
+
+.section__imagenes__carrusel {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: .5s ease;
+    margin: 5px; /* Añadir espacio entre las imágenes */
+}
+
+.section__imagenes__carrusel:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.footer {
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente--montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/*Responsividad*/
+@media (max-width: 1200px) {
+    .header {
+        padding: 10%;
+    }
+
+    .header__menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido {
+        width: auto;
+    }
+
+    .section__imagenes {
+        width: auto;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .section__imagenes {
+        height: auto;
+    }
+}
